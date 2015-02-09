@@ -50,20 +50,15 @@
         </nav>
 
 	<div id="hero">
-		<div class="container herocontent">
+		<div class="container herocontent wow fadeInUp" data-wow-duration="2s">
 			<img src="img/logo.png">
-			<h2 class="wow fadeInUp" data-wow-duration="2s">株式会社インフォディオ</h2>
-			<h4 class="wow fadeInDown">
-				革新的なシステムやサービスを創造し、人々が幸せになれる社会の実現に貢献します。</h4>
 		</div>
 	</div>
 
 	<div id="about" class="topContents heroshot wow bounceInUp" data-wow-duration="4s">
-			<span><img src="img/titleImage01.png"></span>
-		<h3>会社の概要</h3>
 		<div id="topContents_accordion">
 			<div class="topContents_slide">
-				<img src="img/slide1.jpg" />
+				<img src="img/slide01.png" />
 				<div class="topContents_caption">
 					<p>高いプロ意識を持ったITスペシャリストとして、
 					<p>革新的な製品・サービスを創造して
@@ -71,7 +66,7 @@
 				</div>
 			</div>
 			<div class="topContents_slide">
-				<img src="img/panda1.jpg" />
+				<img src="img/slide02.png" />
 				<div class="topContents_caption">
 					<p>◆技術
 					<p>技術者が輝き、幸福になる
@@ -84,25 +79,25 @@
 				</div>
 			</div>
 			<div class="topContents_slide">
-				<img src="img/slide5.jpg" />
+				<img src="img/slide03.png" />
 				<div class="topContents_caption">
 					<p>2015年より新しいインフォディオ成長戦略を開始
 				</div>
 			</div>
 			<div class="topContents_slide">
-				<img src="img/slide6.jpg" />
+				<img src="img/slide04.png" />
 				<div class="topContents_caption">
 					<p>デファクトスタンダードとなる製品・サービスを創る
 				</div>
 			</div>
 		</div>
 	</div>
-	<div id="portfolio">
+	<div id="portfolio" class="topContents heroshot wow bounceInUp" data-wow-duration="6s">
 		<span><img src="img/titleImage02.png"></span>
-		<h3>新卒の一日</h3>
+		<h3></h3>
 		<div id="rookieButtons" class="topContents heroshot wow bounceInUp"	data-wow-duration="6s">
 		<button class="rookieButton" type="button" onclick="bespokeContents.prevButton(0)">
-			<img class="rookieButtonImage" src="img/panda1.jpg">
+			<img class="rookieButtonImage" src="img/s1.png">
 		</button>
 		<button class="rookieButton" type="button" onclick="bespokeContents.prevButton(1)">
 			<img class="rookieButtonImage" src="img/kame1.jpg">
@@ -117,7 +112,7 @@
 			<article>
 				<section>
 					<div class="content0" style="position: absolute; display: block">
-						<img src="img/panda1.jpg" width="512px" height="380px">
+						<img src="img/s1-1.png" width="512px" height="380px">
 						<div class="bespoke_caption">
 							<p>出社後はまず、今日のスケジュールとメールチェックをします。
 							<p>来客の確認し、今日の仕事の段取りを決め、仕事開始です。
@@ -272,15 +267,21 @@
 		</div>
 	</div>
 	</div>
-	<div id="services">
+	
+	
+	<div id="services" class="container">
+		<div class="sectionhead wow bounceInUp" data-wow-duration="2s">
 				<span><img src="img/titleImage03.png"></span>
-			<h3>入社してから</h3>
-	</div>
+				<h3></h3>
+		</div>
+		<img src="img/flow.png">
+	</div>	
+	
 	<div id="testimonials" class="container">
 		<div class="sectionhead wow bounceInUp" data-wow-duration="2s">
-			<span><img src="img/titleImage03.png"></span>
-			<h3>採用概要</h3>
-			<h4>みんな、一緒にやろうぜ！みんな、一緒にやろうぜ！</h4>
+			<span><img src="img/titleImage01.png"></span>
+			<h3></h3>
+			<h4></h4>
 		</div>
 		<div class="row">
 			<div class="col-md-6 wow bounceIn" data-wow-duration="2s"
@@ -350,7 +351,7 @@
 						<div class="sectionhead wow bounceInUp" data-wow-duration="2s">
 
 							<div class="entry_bt">
-								<a href="https://www.infordio.co.jp/recruit/policy.html">今すぐ応募</a>
+								<a href="https://www.infordio.co.jp/recruit/policy.html">今すぐエントリー</a>
 							</div>
 							</div>
 					</blockquote>
@@ -383,8 +384,9 @@
      </footer><!-- FOOTER END -->
 	<script type="text/javascript" src="js/jquery-2.0.0.min.js"></script>
 	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/jquery.nicescroll.js"></script>
-	<script type="text/javascript" src="js/wow.js"></script>
+	
+	<script type="text/javascript" src="js/wow.js"></script> 
+	<script type="text/javascript" src="js/jquery.nicescroll.js"></script>-->
 		<script type="text/javascript" src="js/topContents.js"></script>
 	<script type="text/javascript" src="js/jquery.raccordion.js"></script>
 	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
@@ -394,7 +396,7 @@
 	<script type="text/javascript" src="js/drifolio.js"></script>
 	<script type="text/javascript">
         $(function () {
-        	new WOW().init();
+        	 new WOW().init();
             topContents.init();
             bespokeContents.init();
             

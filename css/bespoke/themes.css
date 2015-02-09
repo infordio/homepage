@@ -53,14 +53,11 @@
 
 /* Concave Theme */
 .concave {
-	background: rgba(235, 156, 184, 0.3);
 }
 .concave section,
 .concave .arrow:hover {
-	background: rgb(235, 156, 184);
 }
 .concave a {
-	color: rgb(235, 156, 184);
 }
 .concave section.bespoke-before {
 	-webkit-transform: translateX(-800px) rotateY(90deg) translateX(-800px);
@@ -180,14 +177,11 @@
 
 /* Classic Theme */
 .classic {
-	background: rgba(243, 111, 86, 0.2);
 }
 .classic section,
 .classic .arrow:hover {
-	background: rgb(243, 111, 86);
 }
 .classic a {
-	color: rgb(243, 111, 86);
 }
 .classic section.bespoke-before {
 	-webkit-transform: translate3d(-1920px, 0, 0);
@@ -238,14 +232,14 @@
 
 /* Carousel Theme */
 .carousel {
-	background: rgba(121, 255, 0, 0.2);
+
 }
 .carousel section,
 .carousel .arrow:hover {
-	background: rgb(131, 199, 69);
+
 }
 .carousel a {
-	color: rgb(131, 199, 69);
+
 }
 .carousel section.bespoke-before {
 	-webkit-transform: translateX(-980px) rotateY(-72deg) translateX(-1290px);

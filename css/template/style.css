@@ -1,16 +1,10 @@
-*{	-webkit-transition: .7s ease-out;
- 	-moz-transition: .7s ease-out;
- 	-o-transition:  .7s ease-out;
- 	transition: .7s ease-out;
-    list-style: none;
-}
-
 /*================================
 TYPOGRAPHY
 ================================*/
 body {
     font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro',sans-serif;
     line-height: 1.8em;
+	background-color:#FCD830;
 }
 
 .bigicon {font-size: 3em;}
@@ -24,11 +18,11 @@ p{
 }
 
 .navbar-inverse{
-	background-color:#0D2E53;
+	background-color:#000;
 }
 
 nav{
-	opacity:0.1;
+	opacity:0.9;
 }
 
 .name{
@@ -36,14 +30,15 @@ nav{
 	font-weight:bold;
 }
 
+
 /*================================
 DEFAULT STYLE & FORMATING
 ================================*/
 ul{padding: 0;}
-a{color: #3081DF}
-a:hover{color: #c3c3c3; text-decoration: none;}
+a{color: #fff}
+a:hover{color: #3081DF; text-decoration: none;}
 
-#services{text-align: center;background-color: #c3c3c3;}
+#services{text-align: center;}
 .col-md-4, .col-md-6{padding-bottom: 50px;}
 .col-md-3 {padding: 0;}
 
@@ -90,14 +85,13 @@ HERO AREA
 }
 
 .herocontent{
-    padding-top: 50px;
+    padding-top: 60px;
     width: 100%;
-    max-width: 900px;
 }
 .heroshot{
     margin-top: 20px;
     width: 100%;
-    max-width: 1200px;
+    te
 
 }
 
@@ -172,7 +166,7 @@ PORTFOLIO SECTION
 }
 
 #shotsByPlayerId img:hover{
-    opacity: .5;
+    opacity: 0.5;
     overflow: hidden;
 }
 
@@ -230,10 +224,10 @@ FOOTER SECTION
 footer{
     text-align: center;
     padding: 50px 0;
-    background: #0D2E53;
+    background: #000;
 }
 
-footer p, footer .bigicon {color: #7e7e7e;}
+footer p, footer .bigicon {color: #fff;}
 
 .footerlinks{margin: 30px 0;}
 .footerlinks li{
@@ -330,17 +324,15 @@ FOLLOW BUTTON
 text-align:center;
 vertical-align:middle;
 display:inline-block;
-padding: 7px 10px  0px 10px;
+padding: 40px 10px  0px 10px;
 border: 1px solid #ccc;
 height:100px;
 width:50%;
 margin-left:auto;
 margin-right:auto;
-font-size:30px;
+font-size:34px;
 color:#fff;
-line-height:50px;
 font-weight:bold;
-line-height:50px;
 background-color:#36C;
 -moz-border-radius:2%;
 -webkit-border-radius:2%/15%;
@@ -351,10 +343,5 @@ border-radius:2%/15%;
 #aside .print-preview:hover,
 .entry_bt a:hover
  {
-color:#333;
--moz-border-radius:2%;
--webkit-border-radius:2%/15%;
-border-radius:2%/15%;
--ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffefbf,endColorstr=#ffffd24d,GradientType=0)";
-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffefbf,endColorstr=#ffffd24d,GradientType=0);
+	opacity:0.6;
 }
