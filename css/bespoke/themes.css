@@ -11,14 +11,14 @@
 
 /* Cube Theme */
 .cube {
-	background: rgba(86, 174, 231, 0.3);
+	
 }
 .cube section,
 .cube .arrow:hover {
-	background: rgb(86, 174, 231);
+
 }
 .cube a {
-	color: rgb(86, 174, 231);
+	
 }
 .cube section.bespoke-before {
 	-webkit-transform: translateX(-332px) rotateY(-70deg) translateX(-652px) rotateY(-110deg) translateX(-530px);
@@ -92,14 +92,14 @@
 
 /* Coverflow Theme */
 .coverflow {
-	background: rgba(42, 206, 185, 0.2);
+	
 }
 .coverflow section,
 .coverflow .arrow:hover {
-	background: rgb(42, 206, 185);
+	
 }
 .coverflow a {
-	color: rgb(42, 206, 185);
+	
 }
 .coverflow section.bespoke-before {
 	-webkit-transform: translateX(-270px) rotateY(45deg) scale(0.6);

@@ -3,7 +3,8 @@ var bespokeContents = new function() {
 
 	var themes,
 	selectedThemeIndex,
-	deck;
+	deck,
+	count = 0;
 
 	this.init = function() {
 		deck = bespoke.from('article');
@@ -13,18 +14,18 @@ var bespokeContents = new function() {
 	function initThemeSwitching() {
 		themes = [
 		          'carousel',
-//		          'cube',
-//		          'coverflow'
-		          'classic'	,	          
+		          'cube',
+		          'coverflow',
+		          'classic',		          
 		          'concave'
 		          ];
 
 		selectedThemeIndex = 0;
 
 		initInstructions();
-		initKeys();
+//		initKeys();
 		initSlideGestures();
-		initThemeGestures();
+//		initThemeGestures();
 
 		selectTheme(0);
 	}
@@ -35,26 +36,26 @@ var bespokeContents = new function() {
 		}
 	}
 
-	function initKeys() {
-		if (/Firefox/.test(navigator.userAgent)) {
-			document.addEventListener('keydown', function(e) {
-				if (e.which >= 37 && e.which <= 40) {
-					e.preventDefault();
-				}
-			});
-		}
-
-		document.addEventListener('keydown', function(e) {
-			var key = e.which;
-
-			key === 37 && deck.prev();
-			(key === 32 || key === 39) && deck.next();
-
-			key === 38 && prevTheme();
-			key === 40 && nextTheme();
-
-		});
-	}
+//	function initKeys() {
+//		if (/Firefox/.test(navigator.userAgent)) {
+//			document.addEventListener('keydown', function(e) {
+//				if (e.which >= 37 && e.which <= 40) {
+//					e.preventDefault();
+//				}
+//			});
+//		}
+//
+//		document.addEventListener('keydown', function(e) {
+//			var key = e.which;
+//
+//			key === 37 && deck.prev();
+//			(key === 32 || key === 39) && deck.next();
+//
+//			key === 38 && prevTheme();
+//			key === 40 && nextTheme();
+//
+//		});
+//	}
 
 	function initSlideGestures() {
 		var main = document.getElementById('bespokeContents'),
@@ -92,36 +93,36 @@ var bespokeContents = new function() {
 		main.addEventListener('touchend', touchend);
 	}
 
-	function initThemeGestures() {
-		var startPosition,
-		delta,
-
-		singleTouch = function(fn, preventDefault) {
-			return function(e) {
-				if (preventDefault) {
-					e.preventDefault();
-				}
-				e.touches.length === 1 && fn(e.touches[0].pageY);
-			};
-		};
-
-		document.addEventListener('touchstart', singleTouch(function(position) {
-			startPosition = position;
-			delta = 0;
-		}));
-
-		document.addEventListener('touchmove', singleTouch(function(position) {
-			delta = position - startPosition;
-		}, true));
-
-		document.addEventListener('touchend', function() {
-			if (Math.abs(delta) < 100) {
-				return;
-			}
-
-			delta > 0 ? prevTheme() : nextTheme();
-		});
-	}
+//	function initThemeGestures() {
+//		var startPosition,
+//		delta,
+//
+//		singleTouch = function(fn, preventDefault) {
+//			return function(e) {
+//				if (preventDefault) {
+//					e.preventDefault();
+//				}
+//				e.touches.length === 1 && fn(e.touches[0].pageY);
+//			};
+//		};
+//
+//		document.addEventListener('touchstart', singleTouch(function(position) {
+//			startPosition = position;
+//			delta = 0;
+//		}));
+//
+//		document.addEventListener('touchmove', singleTouch(function(position) {
+//			delta = position - startPosition;
+//		}, true));
+//
+//		document.addEventListener('touchend', function() {
+//			if (Math.abs(delta) < 100) {
+//				return;
+//			}
+//
+//			delta > 0 ? prevTheme() : nextTheme();
+//		});
+//	}
 
 	function selectTheme(index) {
 		var theme = themes[index];
@@ -151,18 +152,25 @@ var bespokeContents = new function() {
 		var currentComponent = $(".content" + selectedThemeIndex);
 		var nextComponent = $(".content" + id);
 
-		currentComponent.fadeOut(500);
-		nextComponent.fadeIn(500);
+		currentComponent.fadeOut(0);
+		nextComponent.fadeIn(0);
 		selectTheme(id);
 	}
 
 	this.prevButton = function(n) {
+		count++;
+		var previd = modulo(count, themes.length);
 		var currentComponent = $(".content" + selectedThemeIndex);
 		var nextComponent = $(".content" + n);
 
+		document.getElementById("rookieButton0").disabled = "";
+		document.getElementById("rookieButton1").disabled = "";
+		document.getElementById("rookieButton2").disabled = "";
+		document.getElementById("rookieButton"+n).disabled = "disabled";
+		
 		currentComponent.fadeOut(500);
 		nextComponent.fadeIn(500);
-		selectTheme(n);
+		selectTheme(previd);
 	}
 
 	function isTouch() {
