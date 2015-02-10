@@ -65,7 +65,7 @@ var bespokeContents = new function() {
 		singleTouch = function(fn, preventDefault) {
 			return function(e) {
 				if (preventDefault) {
-					e.preventDefault();
+					//e.preventDefault();
 				}
 				e.touches.length === 1 && fn(e.touches[0].pageX);
 			};
