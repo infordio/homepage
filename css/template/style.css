@@ -30,6 +30,16 @@ nav{
 	font-weight:bold;
 }
 
+#logo{
+	max-width: 100%; 
+    height: auto; 
+}
+
+#flow{
+	max-width: 100%; 
+    height: auto; 
+}
+
 
 /*================================
 DEFAULT STYLE & FORMATING

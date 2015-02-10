@@ -11,7 +11,7 @@
 @media only screen and (max-width : 980px) {
     
     /*HREO AREA */
-    #hero{height: 540px;}
+    #hero{}
     
     /*ABOUT SECTION*/
     #about{padding-top: 40px;}
@@ -54,7 +54,7 @@
 
     
     /*Hero area*/
-    #hero{height: 400px;}    
+    #hero{}    
     .herocontent{padding-top: 30px;}
     
     /*About section*/
@@ -69,14 +69,14 @@
 
 /* Smaller Mobile Devices */
 @media only screen and (max-width : 480px) {
-    #hero{height: 320px;}    
+    #hero{}    
     #clients {display: none;}
     .footersocial li{font-size: 1.5em}
 }
 
 /* Smallest Mobile Devices */
 @media only screen and (max-width : 320px) {
-    #hero{height: 480px;}
+    #hero{}
     .herocontent{padding-top: 100px; padding-bottom: 30px;}
 
 }

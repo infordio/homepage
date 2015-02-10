@@ -1,5 +1,8 @@
 @charset "utf-8";
 /* CSS Document */
+.topContents {
+	
+}
 
 .topContents_accordion {
 	overflow:hidden;
@@ -8,7 +11,6 @@
 	display:inline-block;
 }
 .topContents_slide {
-	overflow: hidden;
 	display:block;
 	-moz-box-shadow: -5px 0px 5px rgba(1, 1, 1, 0.3);
 	-webkit-box-shadow: -5px 0px 5px rgba(1, 1, 1, 0.3);
@@ -17,17 +19,16 @@
 	cursor: pointer;
 	float:left;
 	display: inline-block;
-	zoom: 1;
+
 }
 .topContents_slide img {
-	position:relative;
+	
 }
 .topContents_caption {
 	position:absolute;
 	background:rgba(1, 1, 1, 0.4);
-	padding:20px;
 	left:0;
-	width:560px;
+	width:100%;
 }
 .topContents_caption p {
 	color:#FFF;

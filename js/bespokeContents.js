@@ -15,10 +15,12 @@ var bespokeContents = new function() {
 	function initThemeSwitching() {
 		themes = [
 		          'carousel',
-		          'cube',
-		          'coverflow',
-		          'classic',		          
-		          'concave'
+		          'classic',
+		          'carousel',
+		          'cube'
+//		          'coverflow',		          
+//		          'concave',
+		          
 		          ];
 
 		selectedThemeIndex = 0;
