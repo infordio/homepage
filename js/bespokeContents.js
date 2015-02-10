@@ -3,6 +3,7 @@ var bespokeContents = new function() {
 
 	var themes,
 	selectedThemeIndex,
+	selectComponentIndex,
 	deck,
 	count = 0;
 
@@ -21,12 +22,11 @@ var bespokeContents = new function() {
 		          ];
 
 		selectedThemeIndex = 0;
-
+		selectComponentIndex = 0;
 		initInstructions();
 //		initKeys();
 		initSlideGestures();
 //		initThemeGestures();
-
 		selectTheme(0);
 	}
 
@@ -62,28 +62,27 @@ var bespokeContents = new function() {
 		startPosition,
 		delta,
 
-		singleTouch = function(fn, preventDefault) {
+		singleTouch = function(fn) {
 			return function(e) {
-				if (preventDefault) {
-					//e.preventDefault();
-				}
-				e.touches.length === 1 && fn(e.touches[0].pageX);
+				e.touches.length === 1 && fn(e, e.touches[0].pageX);
 			};
 		},
 
-		touchstart = singleTouch(function(position) {
+		touchstart = singleTouch(function(e, position) {
 			startPosition = position;
 			delta = 0;
 		}),
 
-		touchmove = singleTouch(function(position) {
+		touchmove = singleTouch(function(e, position) {
 			delta = position - startPosition;
-		}, true),
+		}),
 
-		touchend = function() {
+		touchend = function(e) {
 			if (Math.abs(delta) < 50) {
 				return;
 			}
+			
+			e.preventDefault();
 
 			delta > 0 ? deck.prev() : deck.next();
 		};
@@ -152,22 +151,23 @@ var bespokeContents = new function() {
 		var currentComponent = $(".content" + selectedThemeIndex);
 		var nextComponent = $(".content" + id);
 
-		currentComponent.fadeOut(0);
-		nextComponent.fadeIn(0);
+		currentComponent.fadeOut(500);
+		nextComponent.fadeIn(500);
 		selectTheme(id);
 	}
 
 	this.prevButton = function(n) {
 		count++;
 		var previd = modulo(count, themes.length);
-		var currentComponent = $(".content" + selectedThemeIndex);
+		var currentComponent = $(".content" + selectComponentIndex);
 		var nextComponent = $(".content" + n);
 
 		document.getElementById("rookieButton0").disabled = "";
 		document.getElementById("rookieButton1").disabled = "";
 		document.getElementById("rookieButton2").disabled = "";
 		document.getElementById("rookieButton"+n).disabled = "disabled";
-		
+
+		selectComponentIndex = n;
 		currentComponent.fadeOut(500);
 		nextComponent.fadeIn(500);
 		selectTheme(previd);
@@ -190,6 +190,3 @@ var bespokeContents = new function() {
 		});
 
 };
-
-
-
