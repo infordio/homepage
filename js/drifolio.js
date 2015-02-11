@@ -3,10 +3,11 @@
 //========================
 $("html").niceScroll({
     mousescrollstep: 70,
-    cursorcolor: "#ea9312",
+    cursorcolor: "#000000",
     cursorwidth: "10px",
     cursorborderradius: "10px",
     cursorborder: "none",
+    cursoropacitymin: 100,
 });
 
 //========================
@@ -46,7 +47,7 @@ $(function() {
                 .removeClass('animated fadeOutUp')
                 .addClass('animated fadeInDown')
                 .fadeIn();
-                
+
             } else {
                 $('.navbar')
                 .removeClass('animated fadeInDown')
