@@ -10,7 +10,7 @@
 
         return this.each(function () {
             var accordionWrapper = $(this);
-            var width = ($(window).width())*2/3;
+            var width = 800;
             accordionWrapper.addClass('topContents_accordion');
             var totalSlides = accordionWrapper.find('.topContents_slide').size();
             var w = width;

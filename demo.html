@@ -2,6 +2,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Expires" content="-1">
 <title>infordio 新卒採用</title>
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
@@ -54,11 +57,10 @@
 		</div>
 	</div>
 
-	<div id="about" class="topContents heroshot wow bounceInUp"
-		data-wow-duration="4s">
+	<div id="about" class="topContents heroshot wow bounceInUp" data-wow-duration="4s">
 		<div id="topContents_accordion">
 			<div class="topContents_slide">
-				<img src="img/slide01.png" />
+				<img id="topSlide01" src="img/slide01.png" />
 				<div class="topContents_caption">
 					<p>高いプロ意識を持ったITスペシャリストとして、
 					<p>革新的な製品・サービスを創造して
@@ -66,7 +68,7 @@
 				</div>
 			</div>
 			<div class="topContents_slide">
-				<img src="img/slide02.png" />
+				<img id="topSlide02" src="img/slide02.png" />
 				<div class="topContents_caption">
 					<p>◆技術
 					<p>技術者が輝き、幸福になる
@@ -79,13 +81,13 @@
 				</div>
 			</div>
 			<div class="topContents_slide">
-				<img src="img/slide03.png" />
+				<img id="topSlide03" src="img/slide03.png" />
 				<div class="topContents_caption">
 					<p>2015年より新しいインフォディオ成長戦略を開始
 				</div>
 			</div>
 			<div class="topContents_slide">
-				<img src="img/slide04.png" />
+				<img id="topSlide04" src="img/slide04.png" />
 				<div class="topContents_caption">
 					<p>デファクトスタンダードとなる製品・サービスを創る
 				</div>
@@ -97,18 +99,20 @@
 			 <span><img src="img/titleImage02.png"></span>
 			<h3></h3>
 			<div id="rookieButtons" class="topContents heroshot wow bounceInUp" data-wow-duration="6s">
-				<button class="rookieButton" id="rookieButton0" type="button"
-					onclick="bespokeContents.prevButton(0)" disabled="disabled">
-					<img class="rookieButtonImage" src="img/s1.png">
-				</button>
-				<button class="rookieButton" id="rookieButton1" type="button"
-					onclick="bespokeContents.prevButton(1)">
-					<img class="rookieButtonImage" src="img/kame1.jpg">
-				</button>
-				<button class="rookieButton" id="rookieButton2" type="button"
-					onclick="bespokeContents.prevButton(2)">
-					<img class="rookieButtonImage" src="img/kingyo1.jpg">
-				</button>
+				<a href="#rookieButtons">
+					<button class="rookieButton" id="rookieButton0" type="button"
+						onclick="bespokeContents.prevButton(0)" disabled="disabled">
+						<img class="rookieButtonImage" src="img/s1.png">
+					</button>
+					<button class="rookieButton" id="rookieButton1" type="button"
+						onclick="bespokeContents.prevButton(1)">
+						<img class="rookieButtonImage" src="img/kame1.jpg">
+					</button>
+					<button class="rookieButton" id="rookieButton2" type="button"
+						onclick="bespokeContents.prevButton(2)">
+						<img class="rookieButtonImage" src="img/kingyo1.jpg">
+					</button>
+				</a>
 			</div>
 
 			<div id="bespoke_main" class="carousel container-fluid">
@@ -390,33 +394,20 @@
 	</footer>
 	<!-- FOOTER END -->
 	<script type="text/javascript" src="js/jquery-2.0.0.min.js"></script>
-	<script type="text/javascript"
-		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
-
-
-	<script type="text/javascript" src="js/wow.js"></script>
-
-
-
-
-	<script type="text/javascript" src="js/bespoke.min.js"></script>
-	<script type="text/javascript" src="js/bespokeContents.js"></script>
-
-
-
-	<script type="text/javascript" src="js/jquery.nicescroll.js"></script>
 	<script type="text/javascript" src="js/topContents.js"></script>
 	<script type="text/javascript" src="js/jquery.raccordion.js"></script>
+	<script type="text/javascript" src="js/wow.js"></script>
+	<script type="text/javascript" src="js/bespoke.min.js"></script>
+	<script type="text/javascript" src="js/bespokeContents.js"></script>
+	<script type="text/javascript" src="js/jquery.nicescroll.js"></script>
 	<script type="text/javascript" src="js/drifolio.js"></script>
 	<script type="text/javascript">
         $(function () {
-
-
+        	topContents.init();
             bespokeContents.init();
-            topContents.init();
             new WOW().init();
-
         });
     </script>
 </body>

@@ -7,7 +7,7 @@ $("html").niceScroll({
     cursorwidth: "10px",
     cursorborderradius: "10px",
     cursorborder: "none",
-    cursoropacitymin: 100,
+ //   cursoropacitymin: 100,
 });
 
 //========================
