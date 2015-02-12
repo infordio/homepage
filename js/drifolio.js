@@ -2,12 +2,12 @@
 //CUSTOM SCROLLBAR
 //========================
 $("html").niceScroll({
-    mousescrollstep: 70,
-    cursorcolor: "#000000",
-    cursorwidth: "10px",
-    cursorborderradius: "10px",
-    cursorborder: "none",
- //   cursoropacitymin: 100,
+	mousescrollstep: 70,
+	cursorcolor: "#000000",
+	cursorwidth: "10px",
+	cursorborderradius: "10px",
+	cursorborder: "none",
+	cursoropacitymin: 100
 });
 
 //========================

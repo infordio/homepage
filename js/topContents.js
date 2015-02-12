@@ -9,7 +9,7 @@ var topContents = new function() {
 		var captionWindthSize = innerPictureWidthSize*2/3;
 		$('#topContents_accordion').raccordion({
             speed: 1000,
-            sliderWidth: innerWindthSize,
+            sliderWidth: 1200,
             sliderHeight: innerPictureHeightSize,
             autoCollapse: true
         });

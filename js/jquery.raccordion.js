@@ -2,8 +2,8 @@
     $.fn.raccordion = function (options) {
         var settings = $.extend({
             speed: 700,
-            sliderWidth: 960,
-            sliderHeight: 300,
+            sliderWidth: 1200,
+            sliderHeight: img_true_size(topSlide01),
             autoCollapse: true,
             activeSlide: 0
         }, options);
