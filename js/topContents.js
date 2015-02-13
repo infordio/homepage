@@ -3,14 +3,14 @@ var topContents = new function() {
 	this.init = function() {
 		var innerWindthSize = window.innerWidth;
 		var innerHeightSize = window.innerHeight;
-		var innerSize = img_true_size(topSlide01);
-		var innerPictureWidthSize = innerSize.width;
-		var innerPictureHeightSize = innerSize.height;
-		var captionWindthSize = innerPictureWidthSize*2/3;
+//		var innerSize = img_true_size("#topSlide01");
+//		var innerPictureWidthSize = innerSize.width;
+//		var innerPictureHeightSize = innerSize.height;
+//		var captionWindthSize = innerPictureWidthSize*2/3;
 		$('#topContents_accordion').raccordion({
             speed: 1000,
             sliderWidth: 1200,
-            sliderHeight: innerPictureHeightSize,
+            sliderHeight: 600,
             autoCollapse: true
         });
 	};

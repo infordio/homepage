@@ -3,7 +3,7 @@
         var settings = $.extend({
             speed: 700,
             sliderWidth: 1200,
-            sliderHeight: img_true_size(topSlide01),
+            sliderHeight: 600,
             autoCollapse: true,
             activeSlide: 0
         }, options);
